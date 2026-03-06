@@ -1,0 +1,136 @@
+body{
+margin:0;
+padding:0;
+font-family:Arial, sans-serif;
+color:white;
+text-align:center;
+height:100vh;
+overflow:hidden;
+
+/* animated background */
+background:linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#1a2a6c);
+background-size:400% 400%;
+animation:bgmove 10s ease infinite;
+}
+
+@keyframes bgmove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+h1{
+margin-top:30px;
+font-size:42px;
+text-shadow:0 0 10px #00f7ff,0 0 20px #00f7ff;
+}
+
+h2{
+margin:8px;
+font-size: 22px;
+text-shadow: 0 0 8px #00f7ff;
+}
+
+#gameArea{
+width:90vw;
+max-width:500px;
+height:60vh;
+background:rgba(0,0,0,0.5);
+border:2px solid #00f7ff;
+border-radius:20px;
+margin:30px auto;
+position:relative;
+overflow:hidden;
+box-shadow:0 0 30px #00f7ff;
+}
+
+#target{
+width:55px;
+height:55px;
+background: radial-gradient(circle,#ff512f,#dd2476);
+border-radius:50%;
+position:absolute;
+cursor:pointer;
+box-shadow:0 0 20px #ff3c00;
+transition:transform 0.1s;
+}
+
+#target:active{
+transform:scale(0.7);
+box-shadow: 0 0 35px #ff3c00;
+}
+
+#bomb{
+width:50px;
+height:50px;
+background:black;
+border-radius:50%;
+position:absolute;
+cursor:pointer;
+box-shadow:0 0 20px red;
+display:none;
+}
+
+/* start button */
+
+#startBtn{
+padding:12px 28px;
+font-size:16px;
+border:none;
+border-radius:25px;
+background:linear-gradient(45deg,#00f7ff,#00c3ff);
+color:black;
+cursor:pointer;
+font-weight:bold;
+box-shadow:0 0 15px #00f7ff;
+transition:0.3s;
+}
+
+#startBtn:hover{
+transform:scale(1.1);
+box-shadow:0 0 25px #00f7ff;
+}
+
+/* game over card */
+
+#gameOverScreen{
+display:none;
+background:rgba(0,0,0,0.8);
+padding:25px;
+border-radius:20px;
+width:260px;
+margin:20px auto;
+box-shadow:0 0 30px black;
+animation:popup 0.4s ease;
+}
+
+@keyframes popup{
+0%{transform:scale(0.5);opacity:0;}
+100%{transform:scale(1);opacity:1;}
+}
+
+/* play again button */
+
+#gameOverScreen button{
+margin-top:10px;
+padding:10px 24px;
+border:none;
+border-radius:25px;
+font-weight:bold;
+cursor:pointer;
+background:linear-gradient(45deg,#ff512f,#ff9966);
+color:white;
+box-shadow:0 0 15px #ff512f;
+transition:0.3s;
+}
+
+#gameOverScreen button:hover{
+transform:scale(1.1);
+box-shadow:0 0 25px #ff512f;
+}
+#gameArea{
+    cursor: crosshair;
+}
+#gameArea:hover{
+    box-shadow: 0 0 40px #00f7ff;
+}

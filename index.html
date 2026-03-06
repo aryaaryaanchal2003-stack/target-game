@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hit The Target</title>
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+<h1>Hit The Target 🎯</h1>
+
+<h2>Score: <span id="score">0</span></h2>
+<h2>High Score: <span id="highscore">0</span></h2>
+<h2>Time: <span id="time">30</span></h2>
+
+<button id="startBtn">Start Game</button>
+
+<div id="gameArea">
+<div id="target"></div>
+<div id="bomb"></div>
+</div>
+
+<div id="gameOverScreen">
+<h2>Game Over 😢</h2>
+<p>Your Score: <span id="finalScore"></span></p>
+<button onclick="restartGame()">Play Again</button>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
