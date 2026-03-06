@@ -1,0 +1,201 @@
+body{
+margin:0;
+padding:0;
+font-family:Arial, sans-serif;
+color:white;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+min-height:100vh;
+text-align:center;
+
+/* dark gaming background */
+background: radial-gradient(circle at top,#0f2027,#122f3a,#0a1c22);
+}
+
+
+/* ---------- TITLE ---------- */
+
+h1{
+font-size:42px;
+color:#00eaff;
+text-shadow:
+0 0 5px #00eaff,
+0 0 15px #00eaff,
+0 0 30px #00eaff;
+margin-bottom:10px;
+}
+
+
+/* ---------- SCORE TEXT ---------- */
+
+h2{
+margin:5px;
+font-size:18px;
+color:#b6faff;
+}
+
+
+/* ---------- GAME AREA ---------- */
+
+#gameArea{
+width:90vw;
+max-width:420px;
+height:70vh;
+max-height:600px;
+
+background:#07161a;
+
+border:2px solid #00eaff;
+border-radius:20px;
+
+box-shadow:
+0 0 10px #00eaff,
+0 0 30px #00eaff;
+
+position:relative;
+overflow:hidden;
+
+margin-top:20px;
+}
+
+
+/* ---------- TARGET ---------- */
+
+#target{
+width:55px;
+height:55px;
+border-radius:50%;
+position:absolute;
+
+background: radial-gradient(circle,#ff3b3b,#ff0000);
+
+box-shadow:
+0 0 10px #ff0000,
+0 0 30px #ff0000;
+
+cursor:pointer;
+
+transition:transform 0.1s;
+}
+
+#target:active{
+transform:scale(0.8);
+}
+
+
+/* ---------- BOMB ---------- */
+
+#bomb{
+width:50px;
+height:50px;
+border-radius:50%;
+background:black;
+
+box-shadow:
+0 0 10px red,
+0 0 25px red;
+
+position:absolute;
+
+
+}
+
+
+/* ---------- START BUTTON ---------- */
+
+#startBtn{
+margin-top:10px;
+
+padding:10px 25px;
+
+border:none;
+border-radius:25px;
+
+background:#00eaff;
+color:#002b33;
+
+font-weight:bold;
+cursor:pointer;
+
+box-shadow:0 0 15px #00eaff;
+
+transition:0.2s;
+}
+
+#startBtn:hover{
+transform:scale(1.05);
+box-shadow:0 0 25px #00eaff;
+}
+
+
+/* ---------- GAME OVER SCREEN ---------- */
+
+#gameOverScreen{
+
+display:none;
+
+background:#08191d;
+
+padding:25px;
+
+border-radius:15px;
+
+width:260px;
+
+margin-top:20px;
+
+box-shadow:
+0 0 20px #00eaff;
+
+animation:popup 0.3s ease;
+}
+
+
+/* ---------- PLAY AGAIN BUTTON ---------- */
+
+#gameOverScreen button{
+
+margin-top:10px;
+
+padding:10px 24px;
+
+border:none;
+border-radius:25px;
+
+font-weight:bold;
+cursor:pointer;
+
+background:linear-gradient(45deg,#ff512f,#ff0000);
+
+color:white;
+
+box-shadow:
+0 0 10px #ff0000,
+0 0 20px #ff0000;
+
+transition:0.2s;
+}
+
+#gameOverScreen button:hover{
+transform:scale(1.05);
+box-shadow:0 0 25px #ff0000;
+}
+
+
+/* ---------- POPUP ANIMATION ---------- */
+
+@keyframes popup{
+
+0%{
+transform:scale(0.5);
+opacity:0;
+}
+
+100%{
+transform:scale(1);
+opacity:1;
+}
+
+}
